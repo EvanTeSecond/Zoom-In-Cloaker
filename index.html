@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overlapping Content Cloaker</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .main-background {
+            width: 100%;
+            height: 100vh;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3em;
+        }
+
+        .overlay-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: #888888;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        @media (max-width: 1000px) { /* Adjust the width as needed */
+            .overlay-background {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-background">
+        Main Content of the Page
+    </div>
+
+    <div class="overlay-background">
+        This is the Overlapping Content
+    </div>
+  
+    <script>
+        window.addEventListener('resize', function() {
+            if (window.innerWidth <= 1000) {
+                document.querySelector('.overlay-background').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
