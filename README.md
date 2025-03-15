@@ -1,6 +1,6 @@
 # Overlapping Content Example
 
-This project demonstrates a simple HTML page where an overlay background with text is displayed on top of the main content. The overlay disappears when the window is resized to a certain threshold, without saving the state permanently between page reloads. This is useful for creating page cloaks.
+This project demonstrates a simple HTML page where an overlay background with text is displayed on top of the main content. The overlay disappears when the window is zoomed in to a certain threshold, without saving the state permanently between page reloads. This is useful for creating page cloaks.
 
 ## Features
 
