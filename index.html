@@ -36,11 +36,6 @@
             transition: opacity 0.3s ease-in-out;
         }
 
-        @media (max-width: 1000px) { /* Adjust the width as needed */
-            .overlay-background {
-                display: none;
-            }
-        }
     </style>
 </head>
 <body>
@@ -50,15 +45,21 @@
     </div>
 
     <div class="overlay-background">
-        This is the Overlapping Content
+        This is the Overlapping Content Try zooming in
     </div>
   
     <script>
+        const thresholdWidth = window.innerWidth * 0.8;
+
         window.addEventListener('resize', function() {
-            if (window.innerWidth <= 1000) {
+            if (window.innerWidth <= thresholdWidth) {
                 document.querySelector('.overlay-background').style.display = 'none';
             }
         });
+
+        if (window.innerWidth <= thresholdWidth) {
+            document.querySelector('.overlay-background').style.display = 'none';
+        }
     </script>
 </body>
 </html>
